@@ -13,6 +13,6 @@ ExpectedResults::ExpectedResults(std::string category): DatabaseComponent(catego
 ExpectedResults::~ExpectedResults() {
 }
 
-std::string ExpectedResults::getExpectedResultsText(std::string id){
+const std::string& ExpectedResults::getExpectedResultsText(const std::string& id) const{
 	return getComponentText(id);
 }

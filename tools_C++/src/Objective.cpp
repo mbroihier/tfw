@@ -14,10 +14,10 @@ Objective::Objective(std::string category): DatabaseComponent(category+".testDbO
 Objective::~Objective() {
 }
 
-std::string Objective::getObjectiveText(std::string id){
+const std::string& Objective::getObjectiveText(const std::string& id) const{
 	return getComponentText(id);
 }
-std::string Objective::getRequirementsInThisTest(std::string id){
+const std::string& Objective::getRequirementsInThisTest(const std::string& id) const{
 	return getTraceKeys(id);
 }
 

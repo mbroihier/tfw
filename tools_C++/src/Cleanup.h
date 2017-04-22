@@ -15,7 +15,7 @@ class Cleanup: public DatabaseComponent {
 public:
 	Cleanup(std::string category);
 	virtual ~Cleanup();
-	std::string getCleanupText(std::string id);
+	const std::string& getCleanupText(const std::string& id) const;
 };
 
 #endif /* CLEANUP_H_ */

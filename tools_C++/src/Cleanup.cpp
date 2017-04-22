@@ -13,6 +13,6 @@ Cleanup::Cleanup(std::string category): DatabaseComponent(category+".testDbPost"
 Cleanup::~Cleanup() {
 }
 
-std::string Cleanup::getCleanupText(std::string id){
+const std::string& Cleanup::getCleanupText(const std::string& id) const {
 	return getComponentText(id);
 }

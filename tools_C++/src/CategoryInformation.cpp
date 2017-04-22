@@ -42,10 +42,10 @@ CategoryInformation::CategoryInformation(std::string category) {
 CategoryInformation::~CategoryInformation() {
 }
 
-std::string CategoryInformation::getCategoryTitle(){
+const std::string& CategoryInformation::getCategoryTitle() const{
 	return categoryTitle;
 }
 
-std::string CategoryInformation::getCategoryDescriptionText(){
+const std::string& CategoryInformation::getCategoryDescriptionText() const{
 	return categoryDescriptionText;
 }

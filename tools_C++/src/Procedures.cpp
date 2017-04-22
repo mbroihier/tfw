@@ -13,7 +13,7 @@ Procedures::Procedures(std::string category): DatabaseComponent(category+".testD
 Procedures::~Procedures() {
 }
 
-std::string Procedures::getProcedureText(std::string id){
+const std::string& Procedures::getProcedureText(const std::string& id) const{
 	return getComponentText(id);
 }
 

@@ -17,8 +17,8 @@ public:
 	Objective(std::string category);
 	virtual ~Objective();
 
-	std::string getObjectiveText(std::string id);
-	std::string getRequirementsInThisTest(std::string id);
+	const std::string& getObjectiveText(const std::string& id) const;
+	const std::string& getRequirementsInThisTest(const std::string& id) const;
 };
 
 #endif /* OBJECTIVE_H_ */

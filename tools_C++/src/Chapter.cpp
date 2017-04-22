@@ -15,7 +15,7 @@
 
 Chapter::Chapter(std::string category, TestDatabase& database) {
 	DOMizeTemplate * DOMizedTemplate = new DOMizeTemplate("../tools_configuration/TOC_Template.html","./"+category+"_toc.html");
-	xml_document& doc = DOMizedTemplate->getDocument();
+	const xml_document& doc = DOMizedTemplate->getDocument();
 	this->status = "UNTESTED";
 
 	xpath_node sectionTitle = doc.select_node("//h1[@id='title']");
@@ -61,11 +61,11 @@ Chapter::Chapter(std::string category, TestDatabase& database) {
 Chapter::~Chapter() {
 }
 
-std::string Chapter::getTitle() {
+const std::string& Chapter::getTitle() const{
 	return title;
 }
 
-std::string Chapter::getStatus() {
+const std::string& Chapter::getStatus() const{
 	return status;
 }
 

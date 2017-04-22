@@ -25,7 +25,7 @@ private:
 public:
 	TestCase(std::string id, std::string category, TestDatabase& database);
 	virtual ~TestCase();
-	std::string getStatus(void);
+	const std::string& getStatus(void) const;
 };
 
 #endif /* TESTCASE_H_ */

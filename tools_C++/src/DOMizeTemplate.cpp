@@ -11,7 +11,7 @@
 #include <fstream>
 
 
-DOMizeTemplate::DOMizeTemplate(std::string _template, std::string filePath) {
+DOMizeTemplate::DOMizeTemplate(const std::string _template, const std::string filePath) {
 	HTMLFile = new std::ofstream();
 	HTMLFile->open(filePath);
 	if (!HTMLFile->is_open()) {
@@ -31,7 +31,7 @@ DOMizeTemplate::~DOMizeTemplate() {
 	}
 }
 
-pugi::xml_document& DOMizeTemplate::getDocument(void){
+const pugi::xml_document& DOMizeTemplate::getDocument(void) const {
 	return doc;
 }
 

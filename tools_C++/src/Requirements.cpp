@@ -55,14 +55,16 @@ void Requirements::update(std::string r) {
 
 }
 
-std::string Requirements::getRequirementsText(std::string id){
+const std::string& Requirements::getRequirementsText(const std::string& id) const{
+
 	if (requirements.find(id) != requirements.end()) {
-		return requirements[id];
+		const std::map<std::string,std::string>::const_iterator iter = requirements.find(id);
+		return iter->second;
 	} else {
-		return "Requirement text for " + id + " not found";
+		return REQUIREMENTS_NOT_FOUND;
 	}
 }
 
-std::map<std::string,std::string> Requirements::getRequirements(){
+const std::map<std::string,std::string>& Requirements::getRequirements() const{
 	return requirements;
 }

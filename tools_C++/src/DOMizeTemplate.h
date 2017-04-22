@@ -20,9 +20,9 @@ private:
 	std::ofstream *HTMLFile;
 
 public:
-	DOMizeTemplate(std::string _template, std::string filePath);
+	DOMizeTemplate(const std::string _template, const std::string filePath);
 	virtual ~DOMizeTemplate();
-	pugi::xml_document& getDocument(void);
+	const pugi::xml_document& getDocument(void) const;
 	void writeDocument(void);
 
 };

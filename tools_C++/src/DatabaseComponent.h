@@ -18,11 +18,11 @@ private:
 	std::map<std::string,std::string> traceKeys;
 public:
 	DatabaseComponent(std::string componentFilePath);
-	~DatabaseComponent();
-	std::vector<std::string> getIds();
-	std::string getComponentText(std::string id);
-	std::string getTraceKeys(std::string id);
-	std::map<std::string,std::string> getAllTraceKeys();
+	virtual ~DatabaseComponent();
+	const std::vector<std::string>& getIds() const;
+	const std::string& getComponentText(const std::string& id) const;
+	const std::string& getTraceKeys(const std::string& id) const;
+	const std::map<std::string,std::string>& getAllTraceKeys() const;
 };
 
 #endif /* DATABASECOMPONENT_H_ */

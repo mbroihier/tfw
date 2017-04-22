@@ -15,7 +15,7 @@ class Setup: public DatabaseComponent {
 public:
 	Setup(std::string category);
 	virtual ~Setup();
-	std::string getSetupText(std::string id);
+	const std::string& getSetupText(const std::string& id) const;
 };
 
 #endif /* SETUP_H_ */

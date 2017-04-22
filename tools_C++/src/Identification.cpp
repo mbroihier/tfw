@@ -16,11 +16,11 @@ Identification::~Identification() {
 	// TODO Auto-generated destructor stub
 }
 
-std::vector<std::string> Identification::getIdentificationIds() {
+const std::vector<std::string>& Identification::getIdentificationIds() const{
 	return getIds();
 }
 
-std::string Identification::getIdentificationText(std::string id) {
+const std::string& Identification::getIdentificationText(std::string id) const{
 	return getComponentText(id);
 }
 

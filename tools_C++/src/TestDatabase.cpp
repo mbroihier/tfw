@@ -43,48 +43,48 @@ TestDatabase::~TestDatabase() {
 	if (requirements) delete requirements;
 }
 
-std::vector<std::string> TestDatabase::getIdentificationIds() {
+const std::vector<std::string>& TestDatabase::getIdentificationIds() const{
 	return identification->getIdentificationIds();
 }
 
-std::string TestDatabase::getIdentificationText(std::string id) {
+const std::string& TestDatabase::getIdentificationText(const std::string& id) const{
 	return identification->getIdentificationText(id);
 }
 
-std::string TestDatabase::getObjectiveText(std::string id) {
+const std::string& TestDatabase::getObjectiveText(const std::string& id) const{
 	return objective->getObjectiveText(id);
 }
-std::string TestDatabase::getRequirementsInThisTest(std::string id){
+const std::string& TestDatabase::getRequirementsInThisTest(const std::string& id) const{
 	return objective->getRequirementsInThisTest(id);
 }
 
-std::string TestDatabase::getSetupText(std::string id) {
+const std::string& TestDatabase::getSetupText(const std::string& id) const{
 	return setup->getSetupText(id);
 }
 
-std::string TestDatabase::getProcedureText(std::string id) {
+const std::string& TestDatabase::getProcedureText(const std::string& id) const{
 	return procedures->getProcedureText(id);
 }
 
-std::string TestDatabase::getExpectedResultsText(std::string id) {
+const std::string& TestDatabase::getExpectedResultsText(const std::string& id) const{
 	return expectedResults->getExpectedResultsText(id);
 }
 
-std::string TestDatabase::getResultsText(std::string id) {
+const std::string& TestDatabase::getResultsText(const std::string& id) const{
 	return results->getResultsText(id);
 }
 
-std::string TestDatabase::getCleanupText(std::string id) {
+const std::string& TestDatabase::getCleanupText(const std::string& id) const{
 	return cleanup->getCleanupText(id);
 }
 
-std::string TestDatabase::getCategoryTitle() {
+const std::string& TestDatabase::getCategoryTitle() const{
 	return categoryInformation->getCategoryTitle();
 }
 
-std::string TestDatabase::getCategoryDescriptionText() {
+const std::string& TestDatabase::getCategoryDescriptionText() const{
 	return categoryInformation->getCategoryDescriptionText();
 }
-std::string TestDatabase::getRequirementsText(std::string id){
+const std::string& TestDatabase::getRequirementsText(const std::string& id) const{
 	return requirements->getRequirementsText(id);
 }

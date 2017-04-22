@@ -13,7 +13,7 @@ Results::Results(std::string category): DatabaseComponent(category+".testDbResul
 Results::~Results() {
 }
 
-std::string Results::getResultsText(std::string id){
+const std::string& Results::getResultsText(const std::string& id) const{
 	return getComponentText(id);
 }
 

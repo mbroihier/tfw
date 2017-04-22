@@ -34,18 +34,18 @@ private:
 public:
 	TestDatabase(std::string category, std::string project);
 	~TestDatabase();
-	std::vector<std::string> getIdentificationIds();
-	std::string getIdentificationText(std::string id);
-	std::string getObjectiveText(std::string id);
-	std::string getSetupText(std::string id);
-	std::string getProcedureText(std::string id);
-	std::string getExpectedResultsText(std::string id);
-	std::string getResultsText(std::string id);
-	std::string getCleanupText(std::string id);
-	std::string getCategoryTitle();
-	std::string getCategoryDescriptionText();
-	std::string getRequirementsText(std::string id);
-	std::string getRequirementsInThisTest(std::string id);
+	const std::vector<std::string>& getIdentificationIds() const;
+	const std::string& getIdentificationText(const std::string& id) const;
+	const std::string& getObjectiveText(const std::string& id) const;
+	const std::string& getSetupText(const std::string& id) const;
+	const std::string& getProcedureText(const std::string& id) const;
+	const std::string& getExpectedResultsText(const std::string& id) const;
+	const std::string& getResultsText(const std::string& id) const;
+	const std::string& getCleanupText(const std::string& id) const;
+	const std::string& getCategoryTitle() const;
+	const std::string& getCategoryDescriptionText() const;
+	const std::string& getRequirementsText(const std::string& id) const;
+	const std::string& getRequirementsInThisTest(const std::string& id) const;
 };
 
 #endif /* TESTDATABASE_H_ */

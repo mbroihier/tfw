@@ -13,7 +13,7 @@ Setup::Setup(std::string category): DatabaseComponent(category+".testDbPre") {
 Setup::~Setup() {
 }
 
-std::string Setup::getSetupText(std::string id){
+const std::string& Setup::getSetupText(const std::string& id) const{
 	return getComponentText(id);
 }
 

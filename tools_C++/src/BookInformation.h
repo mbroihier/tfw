@@ -20,9 +20,9 @@ private:
 public:
 	BookInformation(std::string bookPath);
 	virtual ~BookInformation();
-	std::string getProjectName();
-	std::string getProjectAcronym();
-	std::vector<std::string> getChapters();
+	const std::string& getProjectName() const;
+	const std::string& getProjectAcronym() const;
+	const std::vector<std::string>& getChapters() const;
 };
 
 #endif /* BOOKINFORMATION_H_ */

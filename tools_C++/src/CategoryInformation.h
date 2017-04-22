@@ -17,8 +17,8 @@ private:
 public:
 	CategoryInformation(std::string category);
 	virtual ~CategoryInformation();
-	std::string getCategoryTitle();
-	std::string getCategoryDescriptionText();
+	const std::string& getCategoryTitle() const;
+	const std::string& getCategoryDescriptionText() const;
 };
 
 #endif /* CATEGORYINFORMATION_H_ */

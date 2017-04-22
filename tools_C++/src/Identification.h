@@ -16,8 +16,8 @@ class Identification: public DatabaseComponent {
 public:
 	Identification(std::string category);
 	~Identification();
-	std::vector<std::string> getIdentificationIds();
-	std::string getIdentificationText(std::string id);
+	const std::vector<std::string>& getIdentificationIds() const;
+	const std::string& getIdentificationText(std::string id) const;
 };
 
 #endif /* IDENTIFICATION_H_ */

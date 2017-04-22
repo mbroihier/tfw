@@ -64,14 +64,14 @@ BookInformation::BookInformation(std::string bookPath) {
 BookInformation::~BookInformation() {
 }
 
-std::string BookInformation::getProjectName() {
+const std::string& BookInformation::getProjectName() const {
 	return projectName;
 }
-std::string BookInformation::getProjectAcronym() {
+const std::string& BookInformation::getProjectAcronym() const {
 	return projectAcronym;
 }
 
-std::vector<std::string> BookInformation::getChapters() {
+const std::vector<std::string>& BookInformation::getChapters() const {
 	return chapters;
 }
 

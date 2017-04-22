@@ -15,7 +15,7 @@ class Results: public DatabaseComponent {
 public:
 	Results(std::string category);
 	virtual ~Results();
-	std::string getResultsText(std::string id);
+	const std::string& getResultsText(const std::string& id) const;
 };
 
 #endif /* RESULTS_H_ */

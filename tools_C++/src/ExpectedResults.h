@@ -15,7 +15,7 @@ class ExpectedResults: public DatabaseComponent {
 public:
 	ExpectedResults(std::string category);
 	virtual ~ExpectedResults();
-	std::string getExpectedResultsText(std::string id);
+	const std::string& getExpectedResultsText(const std::string& id) const;
 };
 
 #endif /* EXPECTEDRESULTS_H_ */

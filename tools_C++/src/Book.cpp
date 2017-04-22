@@ -20,7 +20,7 @@ Book::Book(std::string bookPath) {
 	std::vector<std::string> categories = bookInformation->getChapters();
 	std::string projectName = bookInformation->getProjectName();
 	DOMizeTemplate * DOMizedTemplate = new DOMizeTemplate("../tools_configuration/BOOK_TOC_TEMPLATE.html","./"+projectName+"_toc.html");
-	xml_document& doc = DOMizedTemplate->getDocument();
+	const xml_document& doc = DOMizedTemplate->getDocument();
 
 	xpath_node sectionTitle = doc.select_node("//h1[@id='bookTitle']");
 	if (sectionTitle) {

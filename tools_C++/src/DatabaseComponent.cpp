@@ -45,16 +45,18 @@ DatabaseComponent::DatabaseComponent(std::string componentFilePath) {
 DatabaseComponent::~DatabaseComponent() {
 }
 
-std::vector<std::string> DatabaseComponent::getIds() {
+const std::vector<std::string>& DatabaseComponent::getIds() const {
 	return ids;
 }
-std::string DatabaseComponent::getComponentText(std::string id){
-	return componentText[id];
+const std::string& DatabaseComponent::getComponentText(const std::string& id) const {
+	std::map<std::string,std::string>::const_iterator iter = componentText.find(id);
+	return iter->second;
 }
-std::string DatabaseComponent::getTraceKeys(std::string id) {
-	return traceKeys[id];
+const std::string& DatabaseComponent::getTraceKeys(const std::string& id) const {
+	std::map<std::string,std::string>::const_iterator iter = traceKeys.find(id);
+	return iter->second;
 }
-std::map<std::string,std::string> DatabaseComponent::getAllTraceKeys(){
+const std::map<std::string,std::string>& DatabaseComponent::getAllTraceKeys() const {
 	return traceKeys;
 }
 

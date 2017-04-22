@@ -13,7 +13,7 @@
 TestCase::TestCase(std::string id, std::string category, TestDatabase& database) {
 	std::cout << "inside of test case constructor" << std::endl;
 	DOMizedTemplate = new DOMizeTemplate("../tools_configuration/TEST_CASE_TEMPLATE.html","./"+category+"/"+id+".html");
-	xml_document& doc = DOMizedTemplate->getDocument();
+	const xml_document& doc = DOMizedTemplate->getDocument();
 	status = "UNTESTED";
 	xpath_node field = doc.select_node("//td[@id='testCaseId']");
 	if (field) {
@@ -138,6 +138,6 @@ TestCase::~TestCase() {
 	if (DOMizedTemplate) delete DOMizedTemplate;
 }
 
-std::string TestCase::getStatus(void) {
+const std::string& TestCase::getStatus(void) const{
 	return status;
 }

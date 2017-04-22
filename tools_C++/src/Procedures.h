@@ -15,7 +15,7 @@ class Procedures: public DatabaseComponent {
 public:
 	Procedures(std::string category);
 	virtual ~Procedures();
-	std::string getProcedureText(std::string id);
+	const std::string& getProcedureText(const std::string& id) const;
 };
 
 #endif /* PROCEDURES_H_ */

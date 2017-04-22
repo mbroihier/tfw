@@ -24,8 +24,8 @@ private:
 public:
 	Chapter(std::string category, TestDatabase& database);
 	virtual ~Chapter();
-	std::string getTitle();
-	std::string getStatus();
+	const std::string& getTitle() const;
+	const std::string& getStatus() const;
 };
 
 #endif /* CHAPTER_H_ */
