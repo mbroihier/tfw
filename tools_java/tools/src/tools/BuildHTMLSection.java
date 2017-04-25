@@ -1,8 +1,29 @@
 package tools;
 
 import java.io.File;
+/**
+ * 
+ * @author broihier
+ * <pre>
+ * Wrapper class for the main program that builds HTML chapters/sections/test categories
+ * </pre>
+ */
 
 public class BuildHTMLSection {
+	/** 
+	 * Main program for building HTML chapters
+	 * 
+	 * <pre>
+	 * Pseudo-code:
+	 * {@code
+	 * create a book information object passing in an empty book file path;
+	 * create a chapter object passing args[0] as the name;
+	 * }
+	 * </pre>
+	 * @param args[0] path to a chapter/category/section name
+	 * 
+	 * 
+	 */
 
 	public static void main(String[] args) {
 		try {

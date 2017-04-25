@@ -3,8 +3,20 @@ package tools;
 import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
-
+/**
+ * 
+ * @author broihier
+ * <pre>
+ * DOM Utility Class
+ * </pre> 
+ */
 public final class Utilities {
+    /**
+     * Static method to find DOM elements by an ID field
+     * @param head head of the DOM
+     * @param id value to look for
+     * @return element that id was found in
+     */
 	public static Element findElementById(Node head, String id) {
 		Element element = null;
 		for (Node node = head.getFirstChild(); node != null; node = node.getNextSibling()) {
@@ -28,6 +40,11 @@ public final class Utilities {
 		}
 		return element;
 	}
+	/**
+	 * Method to print nodes of the DOM
+	 * @param node current node in DOM
+	 * @param level depth of node
+	 */
 	public static void printNodes(Node node,int level) {
 		level++;
 		System.out.println(node);

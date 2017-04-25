@@ -1,6 +1,4 @@
 package tools;
-
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -8,13 +6,39 @@ import org.w3c.dom.Element;
  * 
  * @author broihier
  *<pre>
- *Class to build test cases
+ *Class for creating TestCase objects
  *</pre>
  */
 public class TestCase {
 	private Document doc = null;
 	private String status = "UNTESTED";
 	private DOMizeTemplate DOMizedTemplate;
+	/** 
+	 * Constructor for creating Test Case objects
+	 * 
+	 * <pre>
+	 * create a DOM using the TEST_CASE_TEMPLATE.html file;
+	 * insert the test case ID into the DOM;
+	 * insert the title into the DOM;
+	 * foreach requirement associated with this test case {
+	 *     put the expanded requirement into the objective requirements list of the DOM;
+	 * }
+	 * put the objective information in the DOM;
+	 * put the setup information into the DOM;
+	 * put the procedure steps (including bullets) into the DOM;
+	 * put the expected results into the DOM;
+	 * put the results into the DOM;
+	 * set the test case status to the value of the results;
+	 * put the cleanup steps into the DOM;
+	 * put the requirement tags into the DOM;
+	 * write the expanded DOM to disk;
+	 * </pre>
+	 * 
+	 * @param id test case ID
+	 * @param category test category (chapter/section)
+	 * @param database test database for the test category
+	 * 
+	 */
 	public TestCase (String id, String category, TestDatabase database) {
 		this.DOMizedTemplate = new DOMizeTemplate("../tools_configuration/TEST_CASE_TEMPLATE.html","./"+category+"/"+id+".html");
 		this.doc = DOMizedTemplate.getDoc();
@@ -97,6 +121,10 @@ public class TestCase {
 		// write updated DOM
 		DOMizedTemplate.writeDocument();
 	}
+	/**
+	 * Method to return the status of a test case
+	 * @return status - getter
+	 */
 	public String getStatus() {
 		return status;
 	}
