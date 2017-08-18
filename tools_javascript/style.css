@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+    color: #0F0;
+    font-family: verdana;
+}
+
+body input,
+body label {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+}
