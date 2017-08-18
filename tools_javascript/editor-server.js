@@ -91,7 +91,8 @@ app.use(function(request, response, next) {
 			let scriptElement = document.createElement("script");
 			scriptElement.setAttribute("type","text/javascript");
 			scriptElement.innerHTML = 
-				"var ws = new WebSocket(\"ws://" + hostName + ":3001\");" +
+			        "var hostName = location.hostname;" +
+				"var ws = new WebSocket(\"ws://\" + hostName + \":3001\");" +
 				"ws.onmessage = function(message) {"+
 				" console.log(\"got this message:\" + message.data);" + 
 				" if (message.data === \"refresh\") {" +
