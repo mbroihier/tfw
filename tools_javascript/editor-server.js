@@ -73,7 +73,9 @@ app.use(function(request, response, next) {
                 let element = document.createElement("a");
                 element.setAttribute("href",file);
                 element.innerHTML = file;
-                insertionPoint.appendChild(document.createElement("li").appendChild(element));
+                let listElement = document.createElement("li");
+                listElement.appendChild(element);
+                insertionPoint.appendChild(listElement);
 			}
 		}
 		response.send(dom.serialize());
