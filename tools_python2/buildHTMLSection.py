@@ -27,7 +27,7 @@ def findElementById(head,iD):
 # This class handles the requirements that are tested in the test category (section) that is being built
 class Requirements:
     # constructor if a requirement list is given
-    def __init__ (self,requirementsInThisTest):
+    def __init__ (self, requirementsInThisTest = None):
 
         self.requirements = {}
     
