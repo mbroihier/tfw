@@ -4,6 +4,7 @@
   "description": "This application will help edit test case files",
   "main": "editor-server.js",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "jsdom": "^11.1.0",
     "ws": "^3.1.0"
