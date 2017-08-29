@@ -138,6 +138,6 @@ app.get("*", function(request, response, next) {
 	next();
 });
 app.use(express.static("./"));
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 
-console.log("Editor server is listening on port 3000");
+console.log("Editor server is listening");
